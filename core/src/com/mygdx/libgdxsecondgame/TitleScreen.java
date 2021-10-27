@@ -27,9 +27,10 @@ public class TitleScreen extends ScreenAdapter {
     }
     @Override
     public void render(float delta){
-        Gdx.gl.glClearColor(0, .25f, 0, 1);
+        Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         game.batch.begin();
+        game.font.getData().setScale(5);
         game.font.draw(game.batch, "Title Screen!", Gdx.graphics.getWidth() * .25f, Gdx.graphics.getHeight() * .75f);
         game.font.draw(game.batch, "Tap if you dare...", Gdx.graphics.getWidth() * .25f, Gdx.graphics.getHeight() * .25f);
         game.batch.end();

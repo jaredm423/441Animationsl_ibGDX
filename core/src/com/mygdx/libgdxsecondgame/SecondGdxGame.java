@@ -20,6 +20,12 @@ public class SecondGdxGame extends Game {
 		font = new BitmapFont();
 		setScreen(new TitleScreen(this));
 	}
+
+	@Override
+	public void render() {
+		super.render();
+	}
+
 	@Override
 	public void dispose () {
 		batch.dispose();

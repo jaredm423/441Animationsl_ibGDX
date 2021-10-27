@@ -11,8 +11,8 @@ import com.badlogic.gdx.math.Vector2;
 public class GameScreen extends ScreenAdapter {
 
     SecondGdxGame game;
-    float touchX = 300;
-    float touchY = 150;
+    float touchX = 500;
+    float touchY = 1000;
     float touchZone = 50;
 
     public GameScreen(SecondGdxGame game) {
