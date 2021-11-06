@@ -1,0 +1,68 @@
+
+fire_skull.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fire-skull
+  rotate: false
+  xy: 1, 115
+  size: 768, 112
+  orig: 768, 112
+  offset: 0, 0
+  index: -1
+fire-skull-5
+  rotate: false
+  xy: 1, 2
+  size: 102, 111
+  orig: 102, 111
+  offset: 0, 0
+  index: -1
+fire-skull-8
+  rotate: false
+  xy: 771, 115
+  size: 101, 112
+  orig: 101, 112
+  offset: 0, 0
+  index: -1
+fire-skull-3
+  rotate: false
+  xy: 105, 2
+  size: 96, 111
+  orig: 96, 111
+  offset: 0, 0
+  index: -1
+fire-skull-4
+  rotate: false
+  xy: 874, 115
+  size: 95, 112
+  orig: 95, 112
+  offset: 0, 0
+  index: -1
+fire-skull-2
+  rotate: false
+  xy: 203, 2
+  size: 95, 111
+  orig: 95, 111
+  offset: 0, 0
+  index: -1
+fire-skull-1
+  rotate: false
+  xy: 300, 2
+  size: 92, 111
+  orig: 92, 111
+  offset: 0, 0
+  index: -1
+fire-skull-7
+  rotate: false
+  xy: 394, 1
+  size: 92, 112
+  orig: 92, 112
+  offset: 0, 0
+  index: -1
+fire-skull-6
+  rotate: false
+  xy: 488, 1
+  size: 72, 112
+  orig: 72, 112
+  offset: 0, 0
+  index: -1

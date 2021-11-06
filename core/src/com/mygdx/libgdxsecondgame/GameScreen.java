@@ -5,14 +5,18 @@ import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
 
     SecondGdxGame game;
-    float touchX = 500;
-    float touchY = 1000;
+
+    float touchX = 300;
+    float touchY = 300;
     float touchZone = 50;
 
     public GameScreen(SecondGdxGame game) {
@@ -38,10 +42,10 @@ public class GameScreen extends ScreenAdapter {
         Gdx.gl.glClearColor(0f, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        game.shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        game.shapeRenderer.setColor(0, 0, 1, 1);
-        game.shapeRenderer.circle(touchX, touchY, 75);
-        game.shapeRenderer.end();
+        game.batch.begin();
+        game.timePassed += Gdx.graphics.getDeltaTime();
+        game.batch.draw(game.animation.getKeyFrame(game.timePassed, true), touchX, touchY);
+        game.batch.end();
     }
     @Override
     public void hide(){

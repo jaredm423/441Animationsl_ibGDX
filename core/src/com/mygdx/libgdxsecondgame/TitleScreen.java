@@ -28,8 +28,8 @@ public class TitleScreen extends ScreenAdapter {
     private int backgroundOffset;
 
     //world parameters
-    private final int WORLD_WIDTH = 72;
-    private final int WORLD_HEIGHT = 128;
+    private final int WORLD_WIDTH = 720;
+    private final int WORLD_HEIGHT = 1280;
 
     public TitleScreen(SecondGdxGame game) {
         this.game = game;
@@ -63,16 +63,21 @@ public class TitleScreen extends ScreenAdapter {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         game.batch.begin();
-        //background
-        game.batch.draw(background, 0,-backgroundOffset, WORLD_WIDTH, WORLD_HEIGHT);
-        game.batch.draw(background, 0, -backgroundOffset + WORLD_HEIGHT,WORLD_WIDTH, WORLD_HEIGHT);
+        //background; it is a little messed up, scroll is a little wonky
+        game.batch.draw(background, 25,-backgroundOffset);
+        game.batch.draw(background, 25, -backgroundOffset + 360);
+        game.batch.draw(background, 25, -backgroundOffset + 720);
+        game.batch.draw(background, 25, -backgroundOffset + 1080);
+        game.batch.draw(background, 25, -backgroundOffset + 1440);
+
         //text
-        game.font.getData().setScale(5);
-        game.font.draw(game.batch, "Title Screen!", Gdx.graphics.getWidth() * .25f, Gdx.graphics.getHeight() * .75f);
-        game.font.draw(game.batch, "Tap if you dare...", Gdx.graphics.getWidth() * .25f, Gdx.graphics.getHeight() * .25f);
+        game.font.getData().setScale(4);
+        game.font.draw(game.batch, "Welcome to ", 150, 680);
+        game.font.draw(game.batch, "Jared's SpoOky Animation!", 25, 580);
+        game.font.draw(game.batch, "Tap if you dare...",100 , 200);
         game.batch.end();
     }
-    @Override
+    @Override //this resize doesn't work great
     public void resize(int w, int h){
         viewport.update(w, h, true);
         batch.setProjectionMatrix(camera.combined);
